@@ -1,0 +1,50 @@
+# taxonomy.yaml
+#
+# The 8 intent categories for AppleSupport customer messages.
+# Defined by manually reading 200 real customer tweets (see data/taxonomy_sample.csv)
+# and noticing which problem types repeat. This file is the single source of
+# truth for intents -- classifier.py, label_golden_set.py, and the eval
+# harness all read categories from here so they never fall out of sync.
+
+intents:
+  - name: battery_issue
+    description: >
+      Battery draining unusually fast or dying quickly, often mentioned
+      right after an iOS update.
+
+  - name: software_bug
+    description: >
+      App or OS glitches not tied to a specific update event -- Siri
+      misbehaving, keyboard/autocorrect glitches, freezing, crashing,
+      stuttering, random restarts.
+
+  - name: update_problem
+    description: >
+      Problems specifically about installing an update, or the phone
+      breaking/getting stuck right after an update was applied.
+
+  - name: device_hardware_issue
+    description: >
+      Physical hardware problems -- cracked screen, overheating, fan
+      running constantly, device won't turn on, charger malfunction.
+
+  - name: login_account
+    description: >
+      Apple ID sign-in failures, iCloud login issues, password sync
+      problems, being logged out of apps unexpectedly.
+
+  - name: storage_management
+    description: >
+      Storage full errors, apps failing to download or install due to
+      insufficient space.
+
+  - name: order_billing_shipping
+    description: >
+      Delivery/shipping status, unexpected charges, warranty coverage
+      questions, order issues.
+
+  - name: unclear_other
+    description: >
+      Vague or rant-style messages with no clear actionable request,
+      scam/phishing verification questions, one-word replies, or
+      "thanks, that fixed it" type closures.
